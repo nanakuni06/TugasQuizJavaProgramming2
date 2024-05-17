@@ -79,6 +79,7 @@ public class interfacebuku extends javax.swing.JFrame {
         try {
             tokobuku = koneksi.createStatement();
             databuku = tokobuku.executeQuery("SELECT * FROM data_buku WHERE judul LIKE '%" + textcari.getText() + "% '||"
+                    + "judul LIKE '%" + textcari.getText() + "%' ||  "
                     + "penulis LIKE '%" + textcari.getText() + "%' ||  "
                     + "harga LIKE '%" + textcari.getText() + "%' || "
                     + "stok LIKE '%" + textcari.getText() + "%'");
